@@ -30,6 +30,32 @@
             padding: 20px;
             border-radius: 10px;
         }
+
+        /* MEVSİM KARTLARI STİLLERİ */
+        .season-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .season-card:hover {
+            transform: scale(1.04);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+        .season-card img {
+            transition: transform 0.3s ease;
+        }
+        .season-card:hover img {
+            transform: scale(1.15);
+        }
+        .spring { background: #e7ffe7; border-top: 5px solid #4CAF50; }
+        .summer { background: #fff5d6; border-top: 5px solid #FFA500; }
+        .autumn { background: #ffe9d6; border-top: 5px solid #d2691e; }
+        .winter { background: #e6f3ff; border-top: 5px solid #1e90ff; }
+
+        .season-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -40,9 +66,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="logo.jpg" alt="Logo" width="130" height="70" class="d-inline-block align-text-top">
-        </a>
+       
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -56,47 +80,54 @@
     </div>
 </nav>
 
+<!-- MEVSİM KARTLARI -->
 <div class="container mt-5">
     <div class="row g-4">
+
+        <!-- İLKBAHAR -->
         <div class="col-md-3">
-            <div class="card h-100 d-flex flex-column">
+            <div class="card season-card spring h-100">
                 <img src="ilkbahar.jpg" class="card-img-top" alt="İlkbahar Resmi" style="height:180px; object-fit:cover;">
                 <div class="card-body">
-                    <h5 class="card-title">İlkbahar</h5>
-                    <p class="card-text">Çiçekler açar, doğa canlanır. Hava ılık ve yağmurlu olur.</p>
+                    <h5 class="season-title">🌼 İlkbahar <small>(Spring)</small></h5>
+                    <p>Çiçekler açar, doğa canlanır. Hava ılık ve yağmurlu olur.</p>
                 </div>
             </div>
         </div>
 
+        <!-- YAZ -->
         <div class="col-md-3">
-            <div class="card h-100 d-flex flex-column">
+            <div class="card season-card summer h-100">
                 <img src="yaz.jpg" class="card-img-top" alt="Yaz Resmi" style="height:180px; object-fit:cover;">
                 <div class="card-body">
-                    <h5 class="card-title">Yaz</h5>
-                    <p class="card-text">Sıcak ve güneşli günlerdir. Tatil ve deniz keyfi başlar.</p>
+                    <h5 class="season-title">☀️ Yaz <small>(Summer)</small></h5>
+                    <p>Sıcak ve güneşli günlerdir. Tatil ve deniz keyfi başlar.</p>
                 </div>
             </div>
         </div>
 
+        <!-- SONBAHAR -->
         <div class="col-md-3">
-            <div class="card h-100 d-flex flex-column">
+            <div class="card season-card autumn h-100">
                 <img src="sonbahar.jpg" class="card-img-top" alt="Sonbahar Resmi" style="height:180px; object-fit:cover;">
                 <div class="card-body">
-                    <h5 class="card-title">Sonbahar</h5>
-                    <p class="card-text">Yapraklar sararır ve dökülür. Hava serinlemeye başlar.</p>
+                    <h5 class="season-title">🍁 Sonbahar <small>(Autumn / Fall)</small></h5>
+                    <p>Yapraklar sararır ve dökülür. Hava serinlemeye başlar.</p>
                 </div>
             </div>
         </div>
 
+        <!-- KIŞ -->
         <div class="col-md-3">
-            <div class="card h-100 d-flex flex-column">
+            <div class="card season-card winter h-100">
                 <img src="kis.jpg" class="card-img-top" alt="Kış Resmi" style="height:180px; object-fit:cover;">
                 <div class="card-body">
-                    <h5 class="card-title">Kış</h5>
-                    <p class="card-text">Soğuk ve kar yağışlı günlerdir. Sıcak içecekler ve tatiller öne çıkar.</p>
+                    <h5 class="season-title">❄️ Kış <small>(Winter)</small></h5>
+                    <p>Soğuk ve kar yağışlı günlerdir. Sıcak içecekler ve tatiller öne çıkar.</p>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 
@@ -110,7 +141,7 @@
         </p>
         <p>
             • Bir yarım küre Güneş'e daha eğik dönük olduğunda orada <strong>yaz</strong> mevsimi yaşanır.<br>
-            • Aynı anda diğer yarım kürede Güneş ışınları daha eğik geldiği için <strong>kış</strong> mevsimi olur.<br>
+            • Aynı anda diğer yarımkürede Güneş ışınları daha eğik geldiği için <strong>kış</strong> mevsimi olur.<br>
             • Güneş ışınlarının daha dengeli geldiği zamanlarda ise <strong>ilkbahar</strong> ve <strong>sonbahar</strong> yaşanır.
         </p>
         <p>
@@ -167,7 +198,6 @@
     </div>
 </section>
 
-
 <!-- İLETİŞİM FORMU BÖLÜMÜ -->
 <section id="iletisim-form" class="container mt-5">
     <h2 class="text-center mb-4">İletişim Formu</h2>
@@ -194,16 +224,6 @@
         </div>
         <button type="submit" class="btn btn-primary w-100">Gönder</button>
     </form>
-</section>
-
-<!-- İLETİŞİM BÖLÜMÜ -->
-<section id="iletisim" class="container mt-5 mb-5">
-    <h2 class="text-center mb-4">İletişim</h2>
-    <div class="info-box">
-        <p><strong>İsim:</strong> Yasin Kağan Özkan</p>
-        <p><strong>Telefon:</strong> 551 111 0554</p>
-        <p><strong>Adres:</strong> Kayseri / Melikgazi</p>
-    </div>
 </section>
 
 <footer>

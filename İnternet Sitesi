@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mevsimler</title>
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
         header {
@@ -19,25 +18,34 @@
             padding: 20px;
             margin-top: 40px;
         }
+        #hakkinda {
+            padding: 60px 0;
+        }
+        #hakkinda h2 {
+            color: #0d6efd;
+        }
+        #hakkinda .info-box {
+            background: #eef6ff;
+            border-left: 5px solid #0d6efd;
+            padding: 20px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
-    
-    <header>
-        <h1>Mevsimler</h1>
-    </header>
 
+<header>
+    <h1>Mevsimler</h1>
+</header>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="#">
             <img src="logo.jpg" alt="Logo" width="130" height="70" class="d-inline-block align-text-top">
         </a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="#">Ana Sayfa</a></li>
@@ -47,7 +55,6 @@
         </div>
     </div>
 </nav>
-
 
 <div class="container mt-5">
     <div class="row g-4">
@@ -92,6 +99,112 @@
         </div>
     </div>
 </div>
+
+<!-- HAKKINDA BÖLÜMÜ -->
+<section id="hakkinda" class="container">
+    <h2 class="text-center mb-4">Mevsimler Nasıl Oluşur?</h2>
+    <div class="info-box">
+        <p>
+            Mevsimler, Dünya'nın Güneş etrafında dolanırken ekseninin eğik olması nedeniyle oluşur. Dünya, 23.5 derece eğik bir eksen üzerinde döner.
+            Bu eğiklik nedeniyle yıl boyunca farklı bölgeler Güneş ışığını farklı açılarla alır.
+        </p>
+        <p>
+            • Bir yarım küre Güneş'e daha eğik dönük olduğunda orada <strong>yaz</strong> mevsimi yaşanır.<br>
+            • Aynı anda diğer yarım kürede Güneş ışınları daha eğik geldiği için <strong>kış</strong> mevsimi olur.<br>
+            • Güneş ışınlarının daha dengeli geldiği zamanlarda ise <strong>ilkbahar</strong> ve <strong>sonbahar</strong> yaşanır.
+        </p>
+        <p>
+            Bu döngü her yıl tekrarlanarak mevsimlerin düzenli bir biçimde oluşmasını sağlar.
+        </p>
+    </div>
+</section>
+
+<!-- TÜRKİYE'DE MEVSİMLER BÖLÜMÜ -->
+<section id="turkiye-mevsimler" class="container mt-5">
+    <h2 class="text-center mb-4">Türkiye'de Mevsimler</h2>
+    <div class="info-box mb-4">
+        <h4>İlkbahar (Mart - Nisan - Mayıs)</h4>
+        <p>
+            Türkiye'de ilkbahar aylarında hava giderek ısınır ve doğa canlanır. Ağaçlar çiçek açar, yağmurlar sık görülür.
+            Bu dönemde genellikle ince montlar veya yağmurluklar tercih edilir.
+        </p>
+        <p>
+            <strong>Bu mevsimde bulunan meyveler:</strong> Çilek, çağla, erik, yenidünya, dut.
+        </p>
+    </div>
+
+    <div class="info-box mb-4">
+        <h4>Yaz (Haziran - Temmuz - Ağustos)</h4>
+        <p>
+            Yaz aylarında Türkiye'nin büyük kısmı sıcak ve güneşli günler yaşar. Akdeniz ve Ege bölgeleri özellikle çok sıcak olur.
+            İnsanlar genellikle ince ve açık renkli kıyafetler giyer, şapka ve güneş gözlüğü sık tercih edilir.
+        </p>
+        <p>
+            <strong>Bu mevsimde bulunan meyveler:</strong> Karpuz, kavun, kiraz, kayısı, şeftali, üzüm, incir.
+        </p>
+    </div>
+
+    <div class="info-box mb-4">
+        <h4>Sonbahar (Eylül - Ekim - Kasım)</h4>
+        <p>
+            Sonbaharda havalar serinlemeye başlar, ağaç yaprakları sararır ve dökülür. Yağmurlar yeniden artış gösterir.
+            Orta kalınlıkta kıyafetler, hırkalar ve ince montlar sık kullanılır.
+        </p>
+        <p>
+            <strong>Bu mevsimde bulunan meyveler:</strong> Elma, armut, nar, üzüm, hurma, ayva.
+        </p>
+    </div>
+
+    <div class="info-box mb-4">
+        <h4>Kış (Aralık - Ocak - Şubat)</h4>
+        <p>
+            Türkiye'de kış ayları soğuk geçer. İç Anadolu ve Doğu Anadolu'da kar yağışı yaygındır.
+            Bu dönemde insanlar kalın montlar, atkılar, bere ve eldiven gibi sıcak tutan kıyafetler giyer.
+        </p>
+        <p>
+            <strong>Bu mevsimde bulunan meyveler:</strong> Portakal, mandalina, greyfurt, elma, armut, muz, kivi.
+        </p>
+    </div>
+</section>
+
+
+<!-- İLETİŞİM FORMU BÖLÜMÜ -->
+<section id="iletisim-form" class="container mt-5">
+    <h2 class="text-center mb-4">İletişim Formu</h2>
+    <form class="info-box">
+        <div class="mb-3">
+            <label class="form-label">İsim</label>
+            <input type="text" class="form-control" placeholder="İsminizi giriniz" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Soyisim</label>
+            <input type="text" class="form-control" placeholder="Soyisminizi giriniz" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Telefon</label>
+            <input type="text" class="form-control" placeholder="Telefon numaranız" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">E-mail (İsteğe bağlı)</label>
+            <input type="email" class="form-control" placeholder="E-mail adresiniz">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Yaşadığınız Şehir</label>
+            <input type="text" class="form-control" placeholder="Şehir">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Gönder</button>
+    </form>
+</section>
+
+<!-- İLETİŞİM BÖLÜMÜ -->
+<section id="iletisim" class="container mt-5 mb-5">
+    <h2 class="text-center mb-4">İletişim</h2>
+    <div class="info-box">
+        <p><strong>İsim:</strong> Yasin Kağan Özkan</p>
+        <p><strong>Telefon:</strong> 551 111 0554</p>
+        <p><strong>Adres:</strong> Kayseri / Melikgazi</p>
+    </div>
+</section>
 
 <footer>
     <p>© 2025</p>

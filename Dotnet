@@ -1,0 +1,105 @@
+using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+using dotnet.Models;
+
+namespace dotnet.Controllers;
+
+public class HomeController : Controller
+{
+
+    public IActionResult Index()
+    {
+        return View();
+    }
+}
+using dotnet.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace dotnet.Controllers;
+
+public class CourseController : Controller
+{
+    public IActionResult Index()
+    {
+        var kurs = new Course();
+        kurs.Id = 1;
+        kurs.Title = "aspnetcore kursu";
+        kurs.Description = "";
+        kurs.Image = "aspnetcore.png";
+        return View(kurs);
+    }
+    public IActionResult List()
+    {
+        var kurslar = new List<Course>()
+        {
+            new Course() {Id = 1, Title="aspnetcore",Description = "", Image="indir.png"},
+            new Course() {Id = 2, Title="java",Description = "", Image="java.png"},
+            new Course() {Id = 3, Title="C#",Description = "", Image="indir.png"},
+            new Course() {Id = 4, Title="react",Description = "", Image="react.png"}
+
+        };
+        return View(kurslar);
+    }
+}
+
+namespace dotnet.Models;
+
+public class ErrorViewModel
+{
+    public string? RequestId { get; set; }
+
+    public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+}
+
+
+namespace dotnet.Models
+{
+    public class Course
+    {
+        public int Id{get;set;}
+        public string? Title{get;set;}
+        public string? Description{get;set;}
+        public string? Image {get;set;}
+    }
+}
+@model Course
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale1.0">
+        <title>Document</title>
+
+    </head>
+    <body>
+        
+            <p>course/index page</p>
+            <p>Id:@Model.Id</p>
+            <p>@Model.Title</p>
+            <p>description: @Model.Description</p>
+
+        
+    </body>
+</html>
+@model List<Course>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale1.0">
+        <title>Document</title>
+
+    </head>
+    <body>
+        @foreach(var  kurs in Model){
+            <p>course/index page</p>
+            <p>Id:@kurs.Id</p>
+            <p>@kurs.Title</p>
+            <p>description: @kurs.Description</p>
+            <img src="~/img/@kurs.Image"/>
+        }
+        
+    </body>
+</html>
